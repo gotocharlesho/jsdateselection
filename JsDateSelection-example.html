@@ -1,0 +1,52 @@
+﻿<script type="text/javascript" src="JsDateSelection-1.0.js"></script>
+
+<select id="birthdayMonth" name="birthdayMonth" class="month"></select>
+<select id="birthdayDay" name="birthdayDay" class="day"></select>
+<select id="birthdayYear" name="birthdayYear" class="year"></select>
+<br><Br><BR>
+<select id="birthdayMonth2" name="birthdayMonth2" class="month"></select>
+<select id="birthdayDay2" name="birthdayDay2" class="day"></select>
+<br><Br><BR>
+<select id="birthdayMonth3" name="birthdayMonth3" class="month"></select>
+<select id="birthdayDay3" name="birthdayDay3" class="day"></select>
+<select id="birthdayYear3" name="birthdayYear3" class="year"></select>
+
+
+<script type="text/javascript" >
+
+var today = new Date();
+var nowYear= today.getFullYear();		
+var dob = new JsDateSelection(
+	{
+		yearId: "birthdayYear",
+		monthId: "birthdayMonth",
+		dayId: "birthdayDay",
+		defaultYear: 1985,
+		defaultMonth: 3,
+		defaultDay: 18,
+		maxYear: nowYear-16,
+		minYear: nowYear-16-80
+	}				
+);
+
+var dob2 = new JsDateSelection(
+	{
+		monthId: "birthdayMonth2",
+		dayId: "birthdayDay2",
+		defaultMonth: 1,
+		defaultDay: 1
+	}				
+);
+
+var dob = new JsDateSelection(
+	{
+		yearId: "birthdayYear3",
+		monthId: "birthdayMonth3",
+		dayId: "birthdayDay3",
+		maxYear: nowYear,
+		minYear: nowYear-80,
+		months: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月']
+	}				
+);
+
+</script>
